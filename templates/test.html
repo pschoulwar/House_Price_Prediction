@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    select {
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+  </style>
+  <script>
+    const jsonData = {
+      "data_col": [
+        "1st block jayanagar",
+        "1st phase jp nagar",
+        "2nd phase judicial layout",
+        "2nd stage nagarbhavi",
+        "5th block hbr layout",
+        "5th phase jp nagar",
+        "6th phase jp nagar",
+        "7th phase jp nagar",
+        "8th phase jp nagar",
+        "9th phase jp nagar",
+        "aecs layout",
+        "abbigere",
+        "akshaya nagar",
+        "ambalipura",
+        "ambedkar nagar",
+        "amruthahalli",
+        "anandapura",
+        "ananth nagar",
+        "anekal",
+        "anjanapura"
+      ]
+    };
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const dropdown = document.getElementById("location-dropdown");
+
+      jsonData.data_col.forEach(function(location) {
+        const option = document.createElement("option");
+        option.value = location;
+        option.text = location;
+        dropdown.appendChild(option);
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Select Location:</h1>
+  <select id="location-dropdown"></select>
+</body>
+</html>
